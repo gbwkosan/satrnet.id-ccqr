@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#118eea" />
+  <title>SatrNet.id & Mikhmon</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="llqrcode.js"></script>
+  <script type="text/javascript" src="satrnetid_webqr.js?v1"></script>
+</head>
+
+<body>
+  <div class="satrnetcss">
+    <div class="left">
+      <button class="bck" onclick="back();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x"
+          viewBox="0 0 16 16">
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </button>
+    </div>
+    <div class="title">Scan untuk masuk</div>
+    <div class="right">
+      <button class="bck" onclick="info();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-fullscreen-exit"
+          viewBox="0 0 16 16">
+          <path
+            d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="wifi"><img src="./wifi.png" alt=""></div>
+    <div class="row">
+      <h3>Internet Hotspot</h3>
+      <div class="button">
+        <button class="btn" id="reload" onclick="location.reload();">
+          <img style="width: 30px; margin: auto" src="./reload.png" alt="">
+          <div class="title">Reload Kamera</div>
+        </button>
+        <button class="btn" onclick="buka();">
+          <img style="width: 30px; margin: auto" src="./chrome.png" alt="">
+          <div class="title">Buka di Chrome</div>
+        </button>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+    <div style="padding-top: 6px; height: 24px; background: rgb(226, 226, 226);">
+      <div style="text-align: center;">Support by SatrNet.id &amp; WebQR</div>
+    </div>
+  </div>
+
+  <center>
+    <div id="main">
+      <div id="mainbody">
+        <div class="camera" id="outdiv"></div>
+      </div>
+    </div>
+    <div id="footer" class="credit">
+      <a id="creditme" href="https://bagussp99.github.io">SatrNet.id QR</a>
+      <br>
+      Powered by <a href="http://www.webqr.com">webqr.com</a>
+    </div>
+  </center>
+  <canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+    load();
+  </script>
+  <script>
+
+// var _0x5d7267=_0x15ac;(function(_0x2f694c,_0x29ac98){var _0x3f171b=_0x15ac,_0x385251=_0x2f694c();while(!![]){try{var _0x4fc8ea=-parseInt(_0x3f171b(0xab))/0x1*(-parseInt(_0x3f171b(0xa8))/0x2)+-parseInt(_0x3f171b(0xbb))/0x3*(-parseInt(_0x3f171b(0xb5))/0x4)+-parseInt(_0x3f171b(0xb4))/0x5*(-parseInt(_0x3f171b(0xb2))/0x6)+parseInt(_0x3f171b(0xb0))/0x7*(parseInt(_0x3f171b(0xb3))/0x8)+parseInt(_0x3f171b(0xaf))/0x9*(-parseInt(_0x3f171b(0xb7))/0xa)+parseInt(_0x3f171b(0xac))/0xb+parseInt(_0x3f171b(0xba))/0xc*(-parseInt(_0x3f171b(0xb1))/0xd);if(_0x4fc8ea===_0x29ac98)break;else _0x385251['push'](_0x385251['shift']());}catch(_0x54b42b){_0x385251['push'](_0x385251['shift']());}}}(_0x5771,0xda6e6));var elem=document['getElementById'](_0x5d7267(0xb9));elem['parentNode'][_0x5d7267(0xaa)](elem);function _0x5771(){var _0x28c28e=['1112SyMsOJ','intent://bagussp99.github.io/satrnet.id-ccqr/#Intent;scheme=http;package=com.android.chrome;end','removeChild','61DPDBSZ','777469lRFiEU','href','attr','9ABjScQ','13006brqMgl','8176909glDmqb','30UUlSJY','6600BGEZTB','316930DxCyYq','84628qWTSXQ','#creditme,.creditme','5902210KwQEhj','https://bagussp99.github.io','powered','36cDpGIv','201XyGegy','location'];_0x5771=function(){return _0x28c28e;};return _0x5771();}function buka(){var _0x3baeef=_0x5d7267;window[_0x3baeef(0xbc)]=_0x3baeef(0xa9);}function _0x15ac(_0x9faac8,_0x115f42){var _0x5771f3=_0x5771();return _0x15ac=function(_0x15acb0,_0x24c8fc){_0x15acb0=_0x15acb0-0xa8;var _0x2a53a5=_0x5771f3[_0x15acb0];return _0x2a53a5;},_0x15ac(_0x9faac8,_0x115f42);}$(document)['ready'](function(){var _0x4d0e9e=_0x5d7267;$(_0x4d0e9e(0xb6))[_0x4d0e9e(0xae)](_0x4d0e9e(0xad))!=_0x4d0e9e(0xb8)&&(window['location'][_0x4d0e9e(0xad)]=_0x4d0e9e(0xb8));});
+
+var _0x1dfc=["\x70\x6F\x77\x65\x72\x65\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64",
+             "\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64","\x70\x61\x72\x65\x6E\x74\x4E\x6F\x64\x65",
+             "\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x69\x6E\x74\x65\x6E\x74\x3A\x2F\x2F\x62\x61\x67\x75\x73\x73\x70\x39\x39\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x73\x61\x74\x72\x6E\x65\x74\x2E\x69\x64\x2D\x63\x63\x71\x72\x2F\x23\x49\x6E\x74\x65\x6E\x74\x3B\x73\x63\x68\x65\x6D\x65\x3D\x68\x74\x74\x70\x3B\x70\x61\x63\x6B\x61\x67\x65\x3D\x63\x6F\x6D\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E\x63\x68\x72\x6F\x6D\x65\x3B\x65\x6E\x64",
+             "\x68\x72\x65\x66","\x61\x74\x74\x72","\x23\x63\x72\x65\x64\x69\x74\x6D\x65\x2C\x2E\x63\x72\x65\x64\x69\x74\x6D\x65",
+             "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x62\x61\x67\x75\x73\x73\x70\x39\x39\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F","\x72\x65\x61\x64\x79"
+];
+var elem=document[_0x1dfc[1]](_0x1dfc[0]);
+    elem[_0x1dfc[3]][_0x1dfc[2]](elem)
+;
+
+function buka(){
+  window[_0x1dfc[4]]= _0x1dfc[5]
+  }
+  $(document)[_0x1dfc[10]](function(){if($(_0x1dfc[8])[_0x1dfc[7]](_0x1dfc[6])!= _0x1dfc[9]){window[_0x1dfc[4]][_0x1dfc[6]]= _0x1dfc[9]}})
+
+    // function back() {
+    //   window.history.back();
+    // }
+
+    function info() {
+      window.alert("Selamat Datang di Internet Hotspot Purwokerto by SatrNet.id")
+    }
+  </script>
+</body>
+
+</html>
